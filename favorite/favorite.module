@@ -8,7 +8,7 @@ function favorite_preprocess_node(&$variables) {
   if ($variables['view_mode'] == 'full') {
     $variables['#attached']['library'][] = 'favorite/favorite';
     $variables['content']['favorite'] = array(
-      '#markup' => '<div id="favorite">FAVORITEEE</div>',
+      '#markup' => '<div id="favorite"></div>',
     );
   }
 }
