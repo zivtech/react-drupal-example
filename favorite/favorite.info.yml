@@ -1,0 +1,6 @@
+core: 8.x
+type: module
+name: Favorite
+description: 'Example React integration module.'
+dependencies:
+  - jsonapi

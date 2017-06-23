@@ -1,0 +1,8 @@
+favorite.data:
+  path: '/favorite/data/{node}'
+  defaults:
+    _title: 'Get favorite data'
+    _controller: '\Drupal\favorite\Controller\FavoriteController::getData'
+  requirements:
+    _access: 'TRUE'
+    node: \d+
