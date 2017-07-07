@@ -5,6 +5,7 @@ import 'whatwg-fetch'; // https://www.npmjs.com/package/whatwg-fetch
 
 
 class Favorite extends Component {
+  
   constructor() {
     super();
     this.toggleFavorite = this.toggleFavorite.bind(this);
@@ -20,6 +21,7 @@ class Favorite extends Component {
     }
     this.getData();
   }
+  
   getData() {
     var path = drupalSettings.path.currentPath;
     var nid = path.split('/')[1]; // This assumes the path is like node/123
@@ -47,10 +49,12 @@ class Favorite extends Component {
       }
     });
   }
+  
   toggleFavorite() {
     var favorited = !this.state.favorited;
     this.saveFavorite(favorited);
   }
+  
   saveFavorite(favorited) {
     var endpoint = '/jsonapi/user/user/' + this.state.user_uuid + '/relationships/field_favorites';
     var method = 'POST';
@@ -83,8 +87,8 @@ class Favorite extends Component {
         console.log('error favoriting node');
       }
     });
-    
   }
+  
   render() {
     if (this.state.user_uid == "0") {
       return null;
@@ -102,6 +106,4 @@ class Favorite extends Component {
 }
 
 ReactDOM.render(<Favorite />, document.getElementById('favorite'));
-
-
 
