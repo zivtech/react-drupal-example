@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import 'whatwg-fetch'; // https://www.npmjs.com/package/whatwg-fetch
 
-
-
 class Favorite extends Component {
   
   constructor() {
@@ -76,8 +74,6 @@ class Favorite extends Component {
     }).then((response) => {
       if (response.ok) {
         response.json().then((data) => {
-         // var response_data = data.data;
-         // console.log(response_data);
           this.setState({
             favorited: favorited
           });
