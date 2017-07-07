@@ -16,7 +16,7 @@ class Favorite extends Component {
       user_uuid: '',
       user_uid: '0',
       node_type: '',
-      node_uuid: '',
+      node_uuid: ''
     }
     this.getData();
   }
