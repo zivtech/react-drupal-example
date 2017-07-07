@@ -38,7 +38,7 @@ class Favorite extends Component {
             user_uid: data.user_uid,
             user_uuid: data.user_uuid,
             node_type: data.node_type,
-            node_uuid: data.node_uuid,
+            node_uuid: data.node_uuid
           });
         });
       }
