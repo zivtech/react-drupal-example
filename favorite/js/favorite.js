@@ -34,7 +34,7 @@ class Favorite extends Component {
       if (response.ok) {
         response.json().then((data) => {
           this.setState({
-            favorited : data.favorited,
+            favorited: data.favorited,
             user_uid: data.user_uid,
             user_uuid: data.user_uuid,
             node_type: data.node_type,
